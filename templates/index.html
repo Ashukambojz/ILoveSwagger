@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swagger Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .alert {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Swagger Tools</h1>
+        <p>Choose a tool below to convert or extract data:</p>
+
+        <!-- Swagger Vx to OpenAPI 3 -->
+        <div class="form-group">
+            <h2>Convert Swagger Vx to OpenAPI 3</h2>
+            <form action="/swagger_vx_to_v3" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Convert</button>
+            </form>
+            <p id="swagger-vx-to-v3-result"></p>
+        </div>
+
+        <!-- Swagger to Excel Format -->
+        <div class="form-group">
+            <h2>Convert Swagger to Excel Format</h2>
+            <form action="/swagger_to_excel" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Convert</button>
+            </form>
+            <p id="swagger-to-excel-result"></p>
+        </div>
+    </div>
+</body>
+</html>
